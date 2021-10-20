@@ -1,4 +1,4 @@
-class Fortune < Formula
+class FortuneO < Formula
   desc "Infamous electronic fortune-cookie generator"
   homepage "https://www.ibiblio.org/pub/linux/games/amusements/fortune/!INDEX.html"
   url "https://www.ibiblio.org/pub/linux/games/amusements/fortune/fortune-mod-9708.tar.gz"
@@ -24,7 +24,7 @@ class Fortune < Formula
     ENV.deparallelize
 
     inreplace "Makefile" do |s|
-      # Don't install offensive quotes
+      # Install offensive quotes
       s.change_make_var! "OFFENSIVE", "1"
 
       # Use our selected compiler
